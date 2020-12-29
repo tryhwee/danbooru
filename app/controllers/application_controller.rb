@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
   include Pundit
   helper_method :search_params
-
+  skip_before_action :verify_authenticity_token
+  
   class ApiLimitError < StandardError; end
 
   self.responder = ApplicationResponder
