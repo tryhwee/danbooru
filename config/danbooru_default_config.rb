@@ -30,7 +30,7 @@ module Danbooru
 
     # The canonical url for the site (e.g. https://danbooru.donmai.us)
     def canonical_url
-      "https://#{hostname}"
+      "http://#{hostname}"
     end
 
     # Contact email address of the admin.
@@ -58,11 +58,11 @@ module Danbooru
     #
     # Usage: `DANBOORU_DEBUG_MODE=true bin/rails test
     def debug_mode
-      false
+      true
     end
 
     def source_code_url
-      "https://github.com/danbooru/danbooru"
+      "https://github.com/tryhwee/danbooru"
     end
 
     def issues_url
@@ -79,7 +79,7 @@ module Danbooru
     # Disable this if you're running a public booru and you don't want email
     # verification for new accounts.
     def new_user_verification?
-      true
+      false
     end
 
     # An array of regexes containing disallowed usernames.
